@@ -1,13 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+// import './index.css';
 import App from './App';
+import { RoomProvider } from './context';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
-  <React.StrictMode>
+  <RoomProvider>
+    <React.StrictMode>
     <App />
-  </React.StrictMode>,
+  </React.StrictMode>
+  </RoomProvider>,
+  
   document.getElementById('root')
 );
 
